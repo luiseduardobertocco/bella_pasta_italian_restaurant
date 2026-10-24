@@ -9,19 +9,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const defaultLanguage = "en";
 
   const getTranslationValue = (language, key) => {
-    const keys = key.split(".");
-    let value = window.translations && window.translations[language]
-      ? window.translations[language]
-      : {};
-
-    for (const part of keys) {
-      if (!value || typeof value !== "object") {
-        return "";
-      }
-      value = value[part];
-    }
-
-    return typeof value === "string" ? value : "";
+    const current = window.translations?.[language] || window.translations?.[defaultLanguage];
+    if (!current) return "";
+    return current[key] || "";
   };
 
   const updateWhatsAppLink = (linkElement, language) => {
@@ -40,30 +30,49 @@ window.addEventListener("DOMContentLoaded", () => {
     linkElement.href = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
   };
 
+  const saveLanguage = (language) => {
+    try {
+      localStorage.setItem(STORAGE_KEY, language);
+    } catch {
+      // ignore storage issues in restricted environments
+    }
+  };
+
+  const readLanguage = () => {
+    try {
+      return localStorage.getItem(STORAGE_KEY) || defaultLanguage;
+    } catch {
+      return defaultLanguage;
+    }
+  };
+
   const applyLanguage = (language) => {
-    const normalizedLanguage = window.translations && window.translations[language]
-      ? language
-      : defaultLanguage;
+    const normalizedLanguage = window.translations?.[language] ? language : defaultLanguage;
 
     document.documentElement.lang = normalizedLanguage;
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const key = element.dataset.i18n;
-      const text = getTranslationValue(normalizedLanguage, key);
+      const value = getTranslationValue(normalizedLanguage, key);
 
-      if (text) {
-        element.textContent = text;
+      if (value) {
+        element.textContent = value;
       }
     });
 
     languageSwitcher.value = normalizedLanguage;
-    localStorage.setItem(STORAGE_KEY, normalizedLanguage);
+    saveLanguage(normalizedLanguage);
 
-    if (whatsappLink) updateWhatsAppLink(whatsappLink, normalizedLanguage);
-    if (floatingWhatsapp) updateWhatsAppLink(floatingWhatsapp, normalizedLanguage);
+    if (whatsappLink) {
+      updateWhatsAppLink(whatsappLink, normalizedLanguage);
+    }
+
+    if (floatingWhatsapp) {
+      updateWhatsAppLink(floatingWhatsapp, normalizedLanguage);
+    }
   };
 
-  const savedLanguage = localStorage.getItem(STORAGE_KEY) || defaultLanguage;
+  const savedLanguage = readLanguage();
   languageSwitcher.value = savedLanguage;
   applyLanguage(savedLanguage);
 
