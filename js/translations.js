@@ -1,4 +1,4 @@
-const translations = {
+window.translations = {
   en: {
     "nav.home": "Home",
     "nav.about": "About",
@@ -9,7 +9,6 @@ const translations = {
     "nav.location": "Location",
     "nav.languageLabel": "Language",
     "nav.reserve": "Book a Table",
-
     "hero.eyebrow": "Italian Restaurant",
     "hero.title": "Authentic Italian flavors, served with warmth.",
     "hero.description": "Handmade pasta, carefully crafted dishes, and a welcoming atmosphere inspired by the traditions of Italy.",
@@ -18,12 +17,10 @@ const translations = {
     "hero.meta.open": "Open daily",
     "hero.meta.delivery": "Takeaway available",
     "hero.meta.rating": "4.9 guest rating",
-
     "about.label": "Our Story",
     "about.title": "A warm table inspired by the heart of Italy.",
     "about.text1": "Bella Pasta brings together the richness of Italian culinary tradition and the warmth of a neighborhood gathering place.",
     "about.text2": "From slow-simmered sauces to handmade pasta and seasonal ingredients, every dish is prepared with care and a sense of occasion.",
-
     "menu.label": "Signature Menu",
     "menu.title": "Curated dishes, made with soul.",
     "menu.antipasti.name": "Antipasti",
@@ -44,17 +41,14 @@ const translations = {
     "menu.drinks.name": "House Red Blend",
     "menu.drinks.price": "$9",
     "menu.drinks.description": "A balanced Italian red with notes of cherry, earth, and spice.",
-
     "gallery.label": "Experience",
     "gallery.title": "A story told through every dish and detail.",
-
     "chefs.label": "Our Kitchen",
     "chefs.title": "A culinary team guided by tradition.",
     "chefs.role1": "Executive Chef",
     "chefs.role2": "Pastry Chef",
     "chefs.bio1": "Luca builds each menu around seasonal ingredients and classic techniques, creating elegant, memorable plates.",
     "chefs.bio2": "Sofia brings a refined touch to desserts, blending Italian classics with contemporary creativity and graceful presentation.",
-
     "reviews.label": "Guest Reviews",
     "reviews.title": "Loved by guests who appreciate authentic dining.",
     "reviews.text1": "“A beautiful restaurant with real soul. The pasta was impeccable and the service felt genuinely warm.”",
@@ -63,7 +57,6 @@ const translations = {
     "reviews.name1": "Marco D.",
     "reviews.name2": "Elena G.",
     "reviews.name3": "Daniel P.",
-
     "location.label": "Visit Us",
     "location.title": "A warm dining experience in the heart of the city.",
     "location.addressLabel": "Address",
@@ -74,7 +67,6 @@ const translations = {
     "location.phone": "+39 02 555 0147",
     "location.whatsapp": "WhatsApp",
     "location.directions": "Get Directions",
-
     "faq.label": "FAQ",
     "faq.title": "Common questions before your visit.",
     "faq.q1": "Do I need a reservation?",
@@ -87,12 +79,10 @@ const translations = {
     "faq.a3": "Yes. Our team can recommend dishes suitable for gluten-free preferences.",
     "faq.a4": "Yes. We host private dinners and special gatherings with tailored menus.",
     "faq.a5": "Yes. We offer takeaway for selected dishes and family-style meals.",
-
     "cta.label": "Reserve Your Table",
     "cta.title": "Make your next meal a memorable Italian experience.",
     "cta.primary": "Book a Table",
     "cta.secondary": "Call Us",
-
     "footer.description": "Food inspired by Italy, served with heart and a welcoming atmosphere for every occasion.",
     "footer.linksTitle": "Navigate",
     "footer.hoursTitle": "Opening Hours",
@@ -100,7 +90,6 @@ const translations = {
     "footer.contactTitle": "Contact",
     "footer.copy": "© 2026 Bella Pasta. All rights reserved."
   },
-
   it: {
     "nav.home": "Home",
     "nav.about": "Chi siamo",
@@ -111,7 +100,6 @@ const translations = {
     "nav.location": "Dove siamo",
     "nav.languageLabel": "Lingua",
     "nav.reserve": "Prenota un Tavolo",
-
     "hero.eyebrow": "Ristorante Italiano",
     "hero.title": "Sapori autentici italiani, serviti con calore.",
     "hero.description": "Pasta fatta a mano, piatti preparati con cura e un’atmosfera accogliente ispirata alle tradizioni dell’Italia.",
@@ -120,12 +108,10 @@ const translations = {
     "hero.meta.open": "Aperto tutti i giorni",
     "hero.meta.delivery": "Asporto disponibile",
     "hero.meta.rating": "Valutazione 4.9",
-
     "about.label": "La nostra storia",
     "about.title": "Un tavolo caldo ispirato al cuore dell’Italia.",
     "about.text1": "Bella Pasta unisce la ricchezza della tradizione culinaria italiana con il calore di un luogo di incontro del quartiere.",
     "about.text2": "Da sughi cotti lentamente a pasta fatta a mano e ingredienti stagionali, ogni piatto è preparato con cura e attenzione.",
-
     "menu.label": "Menu di firma",
     "menu.title": "Piatti curati, preparati con passione.",
     "menu.antipasti.name": "Antipasti",
@@ -146,17 +132,14 @@ const translations = {
     "menu.drinks.name": "Vino Rosso della Casa",
     "menu.drinks.price": "€9",
     "menu.drinks.description": "Un rosso italiano equilibrato con note di ciliegia, terra e spezie.",
-
     "gallery.label": "Esperienza",
     "gallery.title": "Una storia raccontata in ogni piatto e dettaglio.",
-
     "chefs.label": "La nostra cucina",
     "chefs.title": "Una squadra culinaria guidata dalla tradizione.",
     "chefs.role1": "Chef Executive",
     "chefs.role2": "Chef di Pasticceria",
     "chefs.bio1": "Luca costruisce ogni menu attorno a ingredienti di stagione e tecniche classiche, creando piatti eleganti e memorabili.",
     "chefs.bio2": "Sofia porta una raffinata sensibilità ai dolci, unendo i classici italiani alla creatività contemporanea.",
-
     "reviews.label": "Recensioni",
     "reviews.title": "Amato da chi cerca un’esperienza autentica.",
     "reviews.text1": "“Un ristorante bellissimo con anima. La pasta era impeccabile e il servizio davvero caloroso.”",
@@ -165,7 +148,6 @@ const translations = {
     "reviews.name1": "Marco D.",
     "reviews.name2": "Elena G.",
     "reviews.name3": "Daniel P.",
-
     "location.label": "Vieni a trovarci",
     "location.title": "Un’esperienza culinaria calda nel cuore della città.",
     "location.addressLabel": "Indirizzo",
@@ -176,7 +158,6 @@ const translations = {
     "location.phone": "+39 02 555 0147",
     "location.whatsapp": "WhatsApp",
     "location.directions": "Come Arrivare",
-
     "faq.label": "FAQ",
     "faq.title": "Domande frequenti prima del tuo arrivo.",
     "faq.q1": "Ho bisogno di una prenotazione?",
@@ -189,12 +170,10 @@ const translations = {
     "faq.a3": "Sì. Il nostro team può consigliarti piatti adatti alle esigenze senza glutine.",
     "faq.a4": "Sì. Organizziamo cene private e occasioni speciali con menù personalizzati.",
     "faq.a5": "Sì. Offriamo takeaway per alcuni piatti e menu da condividere.",
-
     "cta.label": "Prenota il tuo tavolo",
     "cta.title": "Trasforma il tuo prossimo pasto in un’esperienza italiana indimenticabile.",
     "cta.primary": "Prenota un Tavolo",
     "cta.secondary": "Chiama",
-
     "footer.description": "Cibo ispirato all’Italia, servito con cuore e un’atmosfera accogliente per ogni occasione.",
     "footer.linksTitle": "Navigazione",
     "footer.hoursTitle": "Orari",
@@ -202,7 +181,6 @@ const translations = {
     "footer.contactTitle": "Contatti",
     "footer.copy": "© 2026 Bella Pasta. Tutti i diritti riservati."
   },
-
   es: {
     "nav.home": "Inicio",
     "nav.about": "Nosotros",
@@ -213,7 +191,6 @@ const translations = {
     "nav.location": "Ubicación",
     "nav.languageLabel": "Idioma",
     "nav.reserve": "Reservar Mesa",
-
     "hero.eyebrow": "Restaurante Italiano",
     "hero.title": "Sabores auténticos italianos, servidos con calidez.",
     "hero.description": "Pasta hecha a mano, platos cuidadosamente preparados y una atmósfera acogedora inspirada en las tradiciones de Italia.",
@@ -222,12 +199,10 @@ const translations = {
     "hero.meta.open": "Abierto todos los días",
     "hero.meta.delivery": "Servicio para llevar",
     "hero.meta.rating": "Valoración de 4.9",
-
     "about.label": "Nuestra historia",
     "about.title": "Una mesa cálida inspirada en el corazón de Italia.",
     "about.text1": "Bella Pasta reúne la riqueza de la tradición culinaria italiana con la calidez de un lugar de encuentro del vecindario.",
     "about.text2": "Desde salsas cocidas lentamente hasta la pasta hecha a mano y los ingredientes de temporada, cada plato se prepara con cuidado y ocasión.",
-
     "menu.label": "Menú destacado",
     "menu.title": "Platos seleccionados, hechos con alma.",
     "menu.antipasti.name": "Antipasti",
@@ -248,17 +223,14 @@ const translations = {
     "menu.drinks.name": "Vino Tinto de la Casa",
     "menu.drinks.price": "€9",
     "menu.drinks.description": "Un rojo italiano equilibrado con notas a cereza, tierra y especias.",
-
     "gallery.label": "Experiencia",
     "gallery.title": "Una historia contada en cada plato y detalle.",
-
     "chefs.label": "Nuestra cocina",
     "chefs.title": "Un equipo culinario guiado por la tradición.",
     "chefs.role1": "Chef Ejecutivo",
     "chefs.role2": "Chef de Repostería",
     "chefs.bio1": "Luca diseña cada menú alrededor de ingredientes de temporada y técnicas clásicas, creando platos elegantes y memorables.",
     "chefs.bio2": "Sofia aporta un toque refinado a los postres, combinando los clásicos italianos con creatividad contemporánea.",
-
     "reviews.label": "Reseñas",
     "reviews.title": "Adorado por quienes valoran la cocina auténtica.",
     "reviews.text1": "“Un restaurante precioso con alma. La pasta era impecable y el servicio era verdaderamente cálido.”",
@@ -267,7 +239,6 @@ const translations = {
     "reviews.name1": "Marco D.",
     "reviews.name2": "Elena G.",
     "reviews.name3": "Daniel P.",
-
     "location.label": "Visítanos",
     "location.title": "Una experiencia cálida en el centro de la ciudad.",
     "location.addressLabel": "Dirección",
@@ -278,7 +249,6 @@ const translations = {
     "location.phone": "+39 02 555 0147",
     "location.whatsapp": "WhatsApp",
     "location.directions": "Cómo llegar",
-
     "faq.label": "FAQ",
     "faq.title": "Preguntas frecuentes antes de tu visita.",
     "faq.q1": "¿Necesito reservar?",
@@ -291,12 +261,10 @@ const translations = {
     "faq.a3": "Sí. Nuestro equipo puede recomendarte platos apropiados para necesidades sin gluten.",
     "faq.a4": "Sí. Organizamos cenas privadas y eventos especiales con menús personalizados.",
     "faq.a5": "Sí. Ofrecemos servicio para llevar en platos seleccionados y menús para compartir.",
-
     "cta.label": "Reserva tu mesa",
     "cta.title": "Haz que tu próxima comida sea una experiencia italiana inolvidable.",
     "cta.primary": "Reservar Mesa",
     "cta.secondary": "Llámanos",
-
     "footer.description": "Comida inspirada en Italia, servida con corazón y una atmósfera acogedora para cualquier ocasión.",
     "footer.linksTitle": "Navegar",
     "footer.hoursTitle": "Horario",
@@ -304,7 +272,6 @@ const translations = {
     "footer.contactTitle": "Contacto",
     "footer.copy": "© 2026 Bella Pasta. Todos los derechos reservados."
   },
-
   pt: {
     "nav.home": "Início",
     "nav.about": "Sobre",
@@ -315,7 +282,6 @@ const translations = {
     "nav.location": "Localização",
     "nav.languageLabel": "Idioma",
     "nav.reserve": "Reservar Mesa",
-
     "hero.eyebrow": "Restaurante Italiano",
     "hero.title": "Sabores autênticos italianos, servidos com acolhimento.",
     "hero.description": "Massas feitas à mão, pratos cuidadosamente preparados e uma atmosfera acolhedora inspirada nas tradições da Itália.",
@@ -324,12 +290,10 @@ const translations = {
     "hero.meta.open": "Aberto todos os dias",
     "hero.meta.delivery": "Entrega disponível",
     "hero.meta.rating": "Avaliação 4.9",
-
     "about.label": "Nossa história",
     "about.title": "Uma mesa acolhedora inspirada no coração da Itália.",
     "about.text1": "Bella Pasta reúne a riqueza da tradição culinária italiana com o calor de um espaço de encontro do bairro.",
     "about.text2": "De molhos cozinhados lentamente à massa feita à mão e ingredientes sazonais, cada prato é preparado com cuidado e atenção.",
-
     "menu.label": "Cardápio Especial",
     "menu.title": "Pratos selecionados, preparados com alma.",
     "menu.antipasti.name": "Antipasti",
@@ -350,17 +314,14 @@ const translations = {
     "menu.drinks.name": "Vinho Tinto da Casa",
     "menu.drinks.price": "R$ 29",
     "menu.drinks.description": "Um tinto italiano equilibrado com notas de cereja, terra e especiarias.",
-
     "gallery.label": "Experiência",
     "gallery.title": "Uma história contada em cada prato e detalhe.",
-
     "chefs.label": "Nossa cozinha",
     "chefs.title": "Uma equipe culinária guiada pela tradição.",
     "chefs.role1": "Chef Executivo",
     "chefs.role2": "Chef de Confeitaria",
     "chefs.bio1": "Luca cria cada menu em torno de ingredientes sazonais e técnicas clássicas, desenvolvendo pratos elegantes e memoráveis.",
     "chefs.bio2": "Sofia traz um toque refinado para as sobremesas, unindo os clássicos italianos com criatividade contemporânea.",
-
     "reviews.label": "Avaliações",
     "reviews.title": "Amado por quem valoriza uma experiência autêntica.",
     "reviews.text1": "“Um restaurante bonito com alma. A massa estava impecável e o atendimento foi realmente acolhedor.”",
@@ -369,7 +330,6 @@ const translations = {
     "reviews.name1": "Marco D.",
     "reviews.name2": "Elena G.",
     "reviews.name3": "Daniel P.",
-
     "location.label": "Visite-nos",
     "location.title": "Uma experiência acolhedora no coração da cidade.",
     "location.addressLabel": "Endereço",
@@ -380,7 +340,6 @@ const translations = {
     "location.phone": "+39 02 555 0147",
     "location.whatsapp": "WhatsApp",
     "location.directions": "Como Chegar",
-
     "faq.label": "FAQ",
     "faq.title": "Perguntas frequentes antes da sua visita.",
     "faq.q1": "Preciso fazer reserva?",
@@ -393,12 +352,10 @@ const translations = {
     "faq.a3": "Sim. Nossa equipe pode indicar pratos adequados para necessidades sem glúten.",
     "faq.a4": "Sim. Organizamos jantares privados e eventos especiais com menus personalizados.",
     "faq.a5": "Sim. Oferecemos takeaway em pratos selecionados e menus para compartilhar.",
-
     "cta.label": "Reserve sua mesa",
     "cta.title": "Faça da sua próxima refeição uma experiência italiana inesquecível.",
     "cta.primary": "Reservar Mesa",
     "cta.secondary": "Ligue para Nós",
-
     "footer.description": "Comida inspirada na Itália, servida com coração e um ambiente acolhedor para qualquer ocasião.",
     "footer.linksTitle": "Navegação",
     "footer.hoursTitle": "Horário",
