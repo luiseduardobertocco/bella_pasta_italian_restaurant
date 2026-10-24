@@ -12,7 +12,7 @@ const restaurantConfig = {
 const STORAGE_KEY = "bella-pasta-language";
 const defaultLanguage = "en";
 
-document.addEventListener("DOMContentLoaded", () => {
+(function () {
   const languageSwitcher = document.getElementById("languageSwitcher");
   const whatsappLink = document.getElementById("whatsappLink");
   const floatingWhatsapp = document.getElementById("floatingWhatsApp");
@@ -24,11 +24,59 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedLanguage = localStorage.getItem(STORAGE_KEY) || defaultLanguage;
   languageSwitcher.value = savedLanguage;
 
+  function applyLanguage(language) {
+    const normalizedLanguage = translations && translations[language] ? language : defaultLanguage;
+
+    document.documentElement.lang = normalizedLanguage;
+
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.dataset.i18n;
+      const value = getTranslationValue(normalizedLanguage, key);
+
+      if (value) {
+        element.textContent = value;
+      }
+    });
+
+    languageSwitcher.value = normalizedLanguage;
+    localStorage.setItem(STORAGE_KEY, normalizedLanguage);
+
+    if (whatsappLink) {
+      updateWhatsAppLink(whatsappLink, normalizedLanguage);
+    }
+
+    if (floatingWhatsapp) {
+      updateWhatsAppLink(floatingWhatsapp, normalizedLanguage);
+    }
+  }
+
+  function getTranslationValue(language, key) {
+    const keys = key.split(".");
+    let value = translations && translations[language] ? translations[language] : {};
+
+    for (const part of keys) {
+      if (!value || typeof value !== "object") {
+        return "";
+      }
+      value = value[part];
+    }
+
+    return typeof value === "string" ? value : "";
+  }
+
+  function updateWhatsAppLink(linkElement, language) {
+    const message =
+      restaurantConfig.whatsappMessage[language] ||
+      restaurantConfig.whatsappMessage[defaultLanguage];
+
+    const url = `https://wa.me/${restaurantConfig.whatsappNumber}?text=${encodeURIComponent(message)}`;
+    linkElement.href = url;
+  }
+
   applyLanguage(savedLanguage);
 
   languageSwitcher.addEventListener("change", (event) => {
-    const selectedLanguage = event.target.value;
-    applyLanguage(selectedLanguage);
+    applyLanguage(event.target.value);
   });
 
   if (whatsappLink) {
@@ -38,59 +86,4 @@ document.addEventListener("DOMContentLoaded", () => {
   if (floatingWhatsapp) {
     updateWhatsAppLink(floatingWhatsapp, savedLanguage);
   }
-});
-
-function applyLanguage(language) {
-  const normalizedLanguage = translations[language] ? language : defaultLanguage;
-
-  document.documentElement.lang = normalizedLanguage;
-
-  document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.dataset.i18n;
-    const value = getTranslationValue(normalizedLanguage, key);
-
-    if (value) {
-      element.textContent = value;
-    }
-  });
-
-  const languageSwitcher = document.getElementById("languageSwitcher");
-  if (languageSwitcher) {
-    languageSwitcher.value = normalizedLanguage;
-  }
-
-  localStorage.setItem(STORAGE_KEY, normalizedLanguage);
-
-  const whatsappLink = document.getElementById("whatsappLink");
-  if (whatsappLink) {
-    updateWhatsAppLink(whatsappLink, normalizedLanguage);
-  }
-
-  const floatingWhatsapp = document.getElementById("floatingWhatsApp");
-  if (floatingWhatsapp) {
-    updateWhatsAppLink(floatingWhatsapp, normalizedLanguage);
-  }
-}
-
-function getTranslationValue(language, key) {
-  const keys = key.split(".");
-  let value = translations[language];
-
-  for (const part of keys) {
-    if (!value || typeof value !== "object") {
-      return "";
-    }
-    value = value[part];
-  }
-
-  return typeof value === "string" ? value : "";
-}
-
-function updateWhatsAppLink(linkElement, language) {
-  const message =
-    restaurantConfig.whatsappMessage[language] ||
-    restaurantConfig.whatsappMessage[defaultLanguage];
-
-  const url = `https://wa.me/${restaurantConfig.whatsappNumber}?text=${encodeURIComponent(message)}`;
-  linkElement.href = url;
-}
+})();
