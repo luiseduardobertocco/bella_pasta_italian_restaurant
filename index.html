@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bella Pasta is a modern Italian restaurant offering authentic cuisine, handcrafted pasta, pizza, warm hospitality, and a refined dining experience."
+    />
+    <meta
+      property="og:title"
+      content="Bella Pasta | Authentic Italian Dining"
+    />
+    <meta
+      property="og:description"
+      content="Discover Bella Pasta — a refined Italian restaurant with handmade pasta, seasonal dishes, and warm hospitality."
+    />
+    <meta property="og:type" content="website" />
+    <title>Bella Pasta | Italian Restaurant</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#home" aria-label="Bella Pasta home">
+            <span class="brand-mark">B</span>
+            <span class="brand-name">Bella Pasta</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#home" data-i18n="nav.home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu" data-i18n="nav.menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery" data-i18n="nav.gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#chefs" data-i18n="nav.chefs">Chefs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#reviews" data-i18n="nav.reviews">Reviews</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#location" data-i18n="nav.location">Location</a>
+              </li>
+            </ul>
+
+            <div class="nav-actions d-flex align-items-center gap-3">
+              <label class="language-select" for="languageSwitcher">
+                <span class="visually-hidden" data-i18n="nav.languageLabel">Language</span>
+                <select id="languageSwitcher" class="form-select form-select-sm" aria-label="Select language">
+                  <option value="en">EN</option>
+                  <option value="it">IT</option>
+                  <option value="es">ES</option>
+                  <option value="pt">PT</option>
+                </select>
+              </label>
+
+              <a class="btn btn-primary btn-sm px-3" href="#contact" data-i18n="nav.reserve">
+                Book a Table
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+              <p class="eyebrow" data-i18n="hero.eyebrow">Italian Restaurant</p>
+              <h1 data-i18n="hero.title">Authentic Italian flavors, served with warmth.</h1>
+              <p class="lead" data-i18n="hero.description">
+                Handmade pasta, carefully crafted dishes, and a welcoming atmosphere inspired by the traditions of Italy.
+              </p>
+
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a class="btn btn-primary btn-lg" href="#contact" data-i18n="hero.ctaPrimary">Book a Table</a>
+                <a class="btn btn-outline btn-lg" href="#menu" data-i18n="hero.ctaSecondary">View Menu</a>
+              </div>
+
+              <div class="hero-meta mt-4">
+                <div class="d-flex flex-wrap gap-4">
+                  <span data-i18n="hero.meta.open">Open daily</span>
+                  <span data-i18n="hero.meta.delivery">Takeaway available</span>
+                  <span data-i18n="hero.meta.rating">4.9 guest rating</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="hero-visual">
+                <img
+                  src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80"
+                  alt="Fresh Italian pasta and restaurant ambience"
+                  class="img-fluid"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <div class="section-intro">
+                <p class="eyebrow accent" data-i18n="about.label">Our Story</p>
+                <h2 data-i18n="about.title">A warm table inspired by the heart of Italy.</h2>
+              </div>
+              <p data-i18n="about.text1">
+                Bella Pasta brings together the richness of Italian culinary tradition and the warmth of a neighborhood gathering place.
+              </p>
+              <p data-i18n="about.text2">
+                From slow-simmered sauces to handmade pasta and seasonal ingredients, every dish is prepared with care and a sense of occasion.
+              </p>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="image-card">
+                <img
+                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+                  alt="Bella Pasta dining room with elegant Italian interior"
+                  class="img-fluid rounded-4"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="section section-alt">
+        <div class="container">
+          <div class="text-center section-heading">
+            <p class="eyebrow accent" data-i18n="menu.label">Signature Menu</p>
+            <h2 data-i18n="menu.title">Curated dishes, made with soul.</h2>
+          </div>
+
+          <div class="menu-grid mt-5">
+            <article class="menu-card">
+              <div class="menu-image">
+                <img
+                  src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80"
+                  alt="Italian antipasti platter"
+                  loading="lazy"
+                />
+              </div>
+              <div class="menu-body">
+                <div class="menu-header">
+                  <h3 data-i18n="menu.antipasti.name">Antipasti</h3>
+                  <span data-i18n="menu.antipasti.price">$14</span>
+                </div>
+                <p data-i18n="menu.antipasti.description">Italian cured meats, marinated vegetables, and artisan bread.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-image">
+                <img
+                  src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=900&q=80"
+                  alt="Handmade pasta dish"
+                  loading="lazy"
+                />
+              </div>
+              <div class="menu-body">
+                <div class="menu-header">
+                  <h3 data-i18n="menu.pasta.name">Truffle Tagliatelle</h3>
+                  <span data-i18n="menu.pasta.price">$26</span>
+                </div>
+                <p data-i18n="menu.pasta.description">Silky tagliatelle with cream, black truffle, and parmesan.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-image">
+                <img
+                  src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80"
+                  alt="Wood-fired pizza"
+                  loading="lazy"
+                />
+              </div>
+              <div class="menu-body">
+                <div class="menu-header">
+                  <h3 data-i18n="menu.pizza.name">Margherita Supreme</h3>
+                  <span data-i18n="menu.pizza.price">$22</span>
+                </div>
+                <p data-i18n="menu.pizza.description">San Marzano tomato, basil, mozzarella, and extra virgin olive oil.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-image">
+                <img
+                  src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=900&q=80"
+                  alt="Italian main course"
+                  loading="lazy"
+                />
+              </div>
+              <div class="menu-body">
+                <div class="menu-header">
+                  <h3 data-i18n="menu.mains.name">Braised Short Ribs</h3>
+                  <span data-i18n="menu.mains.price">$31</span>
+                </div>
+                <p data-i18n="menu.mains.description">Slow-cooked beef with rosemary potatoes and rich red wine jus.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-image">
+                <img
+                  src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80"
+                  alt="Italian dessert"
+                  loading="lazy"
+                />
+              </div>
+              <div class="menu-body">
+                <div class="menu-header">
+                  <h3 data-i18n="menu.desserts.name">Panna Cotta</h3>
+                  <span data-i18n="menu.desserts.price">$12</span>
+                </div>
+                <p data-i18n="menu.desserts.description">Vanilla bean panna cotta with berry compote and pistachio crumble.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-image">
+                <img
+                  src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=900&q=80"
+                  alt="Italian wine and drinks"
+                  loading="lazy"
+                />
+              </div>
+              <div class="menu-body">
+                <div class="menu-header">
+                  <h3 data-i18n="menu.drinks.name">House Red Blend</h3>
+                  <span data-i18n="menu.drinks.price">$9</span>
+                </div>
+                <p data-i18n="menu.drinks.description">A balanced Italian red with notes of cherry, earth, and spice.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section">
+        <div class="container">
+          <div class="text-center section-heading">
+            <p class="eyebrow accent" data-i18n="gallery.label">Experience</p>
+            <h2 data-i18n="gallery.title">A story told through every dish and detail.</h2>
+          </div>
+
+          <div class="gallery-grid mt-5">
+            <figure class="gallery-item tall">
+              <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80"
+                alt="Elegant dining room with a warm Italian restaurant atmosphere"
+                loading="lazy"
+              />
+            </figure>
+
+            <figure class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=900&q=80"
+                alt="Fresh handmade pasta preparation in the kitchen"
+                loading="lazy"
+              />
+            </figure>
+
+            <figure class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80"
+                alt="Wood-fired pizza being prepared in a traditional oven"
+                loading="lazy"
+              />
+            </figure>
+
+            <figure class="gallery-item wide">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
+                alt="Restaurant interior with dim lights and a cozy dining environment"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="chefs" class="section section-alt">
+        <div class="container">
+          <div class="text-center section-heading">
+            <p class="eyebrow accent" data-i18n="chefs.label">Our Kitchen</p>
+            <h2 data-i18n="chefs.title">A culinary team guided by tradition.</h2>
+          </div>
+
+          <div class="chefs-grid mt-5">
+            <article class="chef-card">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
+                alt="Chef Luca Moretti portrait"
+                loading="lazy"
+              />
+              <div class="chef-body">
+                <h3>Luca Moretti</h3>
+                <p class="role" data-i18n="chefs.role1">Executive Chef</p>
+                <p data-i18n="chefs.bio1">
+                  Luca builds each menu around seasonal ingredients and classic techniques, creating elegant, memorable plates.
+                </p>
+              </div>
+            </article>
+
+            <article class="chef-card">
+              <img
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80"
+                alt="Chef Sofia Rossi portrait"
+                loading="lazy"
+              />
+              <div class="chef-body">
+                <h3>Sofia Rossi</h3>
+                <p class="role" data-i18n="chefs.role2">Pastry Chef</p>
+                <p data-i18n="chefs.bio2">
+                  Sofia brings a refined touch to desserts, blending Italian classics with contemporary creativity and graceful presentation.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="section">
+        <div class="container">
+          <div class="text-center section-heading">
+            <p class="eyebrow accent" data-i18n="reviews.label">Guest Reviews</p>
+            <h2 data-i18n="reviews.title">Loved by guests who appreciate authentic dining.</h2>
+          </div>
+
+          <div class="reviews-grid mt-5">
+            <article class="review-card">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p data-i18n="reviews.text1">“A beautiful restaurant with real soul. The pasta was impeccable and the service felt genuinely warm.”</p>
+              <h3 data-i18n="reviews.name1">Marco D.</h3>
+            </article>
+
+            <article class="review-card">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p data-i18n="reviews.text2">“Every detail feels thoughtful — from the atmosphere to the flavors. It feels like an Italian evening you want to repeat.”</p>
+              <h3 data-i18n="reviews.name2">Elena G.</h3>
+            </article>
+
+            <article class="review-card">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p data-i18n="reviews.text3">“Excellent food, elegant setting, and a team that makes you feel like a guest in their home.”</p>
+              <h3 data-i18n="reviews.name3">Daniel P.</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="location" class="section section-alt">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+              <div class="section-intro">
+                <p class="eyebrow accent" data-i18n="location.label">Visit Us</p>
+                <h2 data-i18n="location.title">A warm dining experience in the heart of the city.</h2>
+              </div>
+
+              <div class="info-list">
+                <div class="info-item">
+                  <strong data-i18n="location.addressLabel">Address</strong>
+                  <p data-i18n="location.address">Via Roma 214, Milan, Italy</p>
+                </div>
+
+                <div class="info-item">
+                  <strong data-i18n="location.hoursLabel">Opening Hours</strong>
+                  <p data-i18n="location.hours">Mon–Sun: 12:00–23:00</p>
+                </div>
+
+                <div class="info-item">
+                  <strong data-i18n="location.phoneLabel">Phone</strong>
+                  <p data-i18n="location.phone">+39 02 555 0147</p>
+                </div>
+              </div>
+
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a
+                  class="btn btn-primary"
+                  href="#"
+                  id="whatsappLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="location.whatsapp"
+                >
+                  WhatsApp
+                </a>
+
+                <a
+                  class="btn btn-outline"
+                  href="https://maps.google.com/?q=Via+Roma+214+Milan+Italy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="location.directions"
+                >
+                  Get Directions
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="map-placeholder">
+                <img
+                  src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=80"
+                  alt="Restaurant location map area in Milan"
+                  class="img-fluid rounded-4"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="container faq-container">
+          <div class="section-heading text-center">
+            <p class="eyebrow accent" data-i18n="faq.label">FAQ</p>
+            <h2 data-i18n="faq.title">Common questions before your visit.</h2>
+          </div>
+
+          <div class="accordion mt-5" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true">
+                  <span data-i18n="faq.q1">Do I need a reservation?</span>
+                </button>
+              </h3>
+              <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq.a1">
+                  We strongly recommend booking, especially on weekends and evenings.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false">
+                  <span data-i18n="faq.q2">Do you offer vegetarian options?</span>
+                </button>
+              </h3>
+              <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq.a2">
+                  Yes. We offer a variety of vegetarian dishes prepared with seasonal ingredients.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false">
+                  <span data-i18n="faq.q3">Do you have gluten-free options?</span>
+                </button>
+              </h3>
+              <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq.a3">
+                  Yes. Our team can recommend dishes suitable for gluten-free preferences.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false">
+                  <span data-i18n="faq.q4">Do you host private events?</span>
+                </button>
+              </h3>
+              <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq.a4">
+                  Yes. We host private dinners and special gatherings with tailored menus.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive" aria-expanded="false">
+                  <span data-i18n="faq.q5">Do you offer takeaway?</span>
+                </button>
+              </h3>
+              <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq.a5">
+                  Yes. We offer takeaway for selected dishes and family-style meals.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section cta-section">
+        <div class="container">
+          <div class="cta-box">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-8">
+                <p class="eyebrow accent" data-i18n="cta.label">Reserve Your Table</p>
+                <h2 data-i18n="cta.title">Make your next meal a memorable Italian experience.</h2>
+              </div>
+
+              <div class="col-lg-4 text-lg-end">
+                <div class="d-flex flex-wrap gap-3 justify-content-lg-end">
+                  <a class="btn btn-primary btn-lg" href="#contact" data-i18n="cta.primary">Book a Table</a>
+                  <a class="btn btn-outline btn-lg" href="tel:+390255550147" data-i18n="cta.secondary">Call Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <a href="#home" class="footer-brand" aria-label="Bella Pasta home">
+              <span class="brand-mark">B</span>
+              <span class="brand-name">Bella Pasta</span>
+            </a>
+
+            <p data-i18n="footer.description">
+              Food inspired by Italy, served with heart and a welcoming atmosphere for every occasion.
+            </p>
+          </div>
+
+          <div class="col-lg-2">
+            <h3 data-i18n="footer.linksTitle">Navigate</h3>
+            <ul class="footer-links">
+              <li><a href="#about" data-i18n="nav.about">About</a></li>
+              <li><a href="#menu" data-i18n="nav.menu">Menu</a></li>
+              <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+              <li><a href="#location" data-i18n="nav.location">Location</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <h3 data-i18n="footer.hoursTitle">Opening Hours</h3>
+            <ul class="footer-links">
+              <li data-i18n="footer.hoursValue">Mon–Sun: 12:00–23:00</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <h3 data-i18n="footer.contactTitle">Contact</h3>
+            <ul class="footer-links">
+              <li><a href="tel:+390255550147">+39 02 555 0147</a></li>
+              <li><a href="mailto:hello@bellapasta.it">hello@bellapasta.it</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p data-i18n="footer.copy">© 2026 Bella Pasta. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      id="floatingWhatsApp"
+      class="floating-whatsapp"
+      aria-label="Contact Bella Pasta on WhatsApp"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      WhatsApp
+    </a>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
