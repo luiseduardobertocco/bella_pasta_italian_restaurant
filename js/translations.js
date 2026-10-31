@@ -1,5 +1,6 @@
 window.translations = {
   en: {
+    "accessibility.skipContent": "Skip to content",
     "nav.home": "Home",
     "nav.about": "About",
     "nav.menu": "Menu",
@@ -91,6 +92,7 @@ window.translations = {
     "footer.copy": "© 2026 Bella Pasta. All rights reserved."
   },
   it: {
+    "accessibility.skipContent": "Vai al contenuto",
     "nav.home": "Home",
     "nav.about": "Chi siamo",
     "nav.menu": "Menu",
@@ -182,6 +184,7 @@ window.translations = {
     "footer.copy": "© 2026 Bella Pasta. Tutti i diritti riservati."
   },
   es: {
+    "accessibility.skipContent": "Ir al contenido",
     "nav.home": "Inicio",
     "nav.about": "Nosotros",
     "nav.menu": "Menú",
@@ -273,6 +276,7 @@ window.translations = {
     "footer.copy": "© 2026 Bella Pasta. Todos los derechos reservados."
   },
   pt: {
+    "accessibility.skipContent": "Pular para o conteúdo",
     "nav.home": "Início",
     "nav.about": "Sobre",
     "nav.menu": "Cardápio",

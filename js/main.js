@@ -1,7 +1,9 @@
 window.addEventListener("DOMContentLoaded", () => {
   const languageSwitcher = document.getElementById("languageSwitcher");
-  const whatsappLink = document.getElementById("whatsappLink");
-  const floatingWhatsapp = document.getElementById("floatingWhatsApp");
+  const whatsappLinks = ["whatsappLink", "ctaWhatsAppLink", "floatingWhatsApp"]
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+  const mainNav = document.getElementById("mainNav");
 
   if (!languageSwitcher) return;
 
@@ -27,7 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
       pt: "Olá Bella Pasta, gostaria de reservar uma mesa."
     }[defaultLanguage];
 
-    linkElement.href = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    linkElement.href = `https://wa.me/39025550147?text=${encodeURIComponent(message)}`;
   };
 
   const saveLanguage = (language) => {
@@ -63,13 +65,7 @@ window.addEventListener("DOMContentLoaded", () => {
     languageSwitcher.value = normalizedLanguage;
     saveLanguage(normalizedLanguage);
 
-    if (whatsappLink) {
-      updateWhatsAppLink(whatsappLink, normalizedLanguage);
-    }
-
-    if (floatingWhatsapp) {
-      updateWhatsAppLink(floatingWhatsapp, normalizedLanguage);
-    }
+    whatsappLinks.forEach((linkElement) => updateWhatsAppLink(linkElement, normalizedLanguage));
   };
 
   const savedLanguage = readLanguage();
@@ -78,5 +74,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   languageSwitcher.addEventListener("change", (event) => {
     applyLanguage(event.target.value);
+  });
+
+  mainNav?.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (mainNav.classList.contains("show") && window.bootstrap?.Collapse) {
+        window.bootstrap.Collapse.getOrCreateInstance(mainNav).hide();
+      }
+    });
   });
 });
